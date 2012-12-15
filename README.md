@@ -1,2 +1,1 @@
-sparist.github.com
-==================
+The GitHub User Page.
