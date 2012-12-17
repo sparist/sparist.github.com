@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Sparist Coding Standard</title>
+		<link
+			href="http://fonts.googleapis.com/css?family=Lato:300"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<style>
+			body {
+				font-family: "Lato", "Helvetica", serif;
+				color: #555;
+			}
+			section {
+				margin: 1.5em;
+			}
+			li, p {
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+			}
+		</style>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<section>
+			<h1>Sparist C++ Coding Standard</h1>
+
+			<p>This document defines the coding standard applied to all
+			<a href="http://sparist.com">Sparist</a> C++ projects.</p>
+
+			<section>
+				<h1>Rules and Recommendations</h1>
+
+				<p>All rules and recommendations defined by the
+				<a href="http://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=637">CERT
+				C++ Secure Coding Standard</a> must be followed.
+			</section>
+
+			<section>
+				<h1>Style</h1>
+
+				<p>All code must be stylistically consistent.</p>
+
+				<p>This section attempts to codify the style used in the code.
+				For any case in which the rules are unclear, refer to the
+				code.</p>
+
+				<section>
+					<h1>Line Indentation</h1>
+
+					<ul>
+						<li>Tabs, not spaces.</li>
+
+						<li>Indent by one tab for each <dfn>list</dfn>
+						(<code><...></code>, <code>[...]</code>,
+						<code>(...)</code>, or <code>{...}</code>) that the line
+						is inside.  Label-type statements (such as
+						<code>case</code> labels, <code>goto</code> labels, and
+						access specifiers) are considered part of a list, not
+						inside it, and are indented accordingly.
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Line Width</h1>
+
+					<ul>
+						<li>Lines are limited to 80 columns in width (when tabs
+						are shown as 4 spaces) unless impractical.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Line Breaks</h1>
+
+					<ul>
+						<li>Declarations are separated from each other by a
+						blank line.</li>
+
+						<li>Break a line by expanding a list.  Lists can be
+						<dfn>collapsed</dfn> (items on one line) or
+						<dfn>expanded</dfn> (each item on its own line).</li>
+
+						<li>Each base class, initializer, and leading colon
+						thereof is on its own line.</li>
+
+						<li>Each brace in a declaration is on its own line.</li>
+
+						<li>Each template declaration is on its own line.</li>
+
+						<li>Each label is on its own line.</li>
+
+						<li>Use line breaks minimally to increase the number of
+						text on a page.  There should never be two consecutive
+						line breaks.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Spaces</h1>
+
+					<p>There must be a space:</p>
+					<ul>
+						<li>Before and after each collapsed list item.</li>
+
+						<li>Before and after each binary and tertiary
+						operator.</li>
+
+						<li>Before and after asterisk and ampersand in
+						pointer and reference declarations, respectively.</li>
+
+						<li>After the <code>operator</code> keyword.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Modifiers/Qualifiers</h1>
+
+					<ul>
+						<li>Each modifier/qualifier follows whatever it
+						modifies/qualifies.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Types</h1>
+
+					<ul>
+						<li>Use <code>struct</code>, not <code>class</code>.
+					</ul>
+				</section>
+
+				<section>
+					<h1>Names</h1>
+
+					<p>The following rules apply to all names:</p>
+					<ul>
+						<li>Capitalize the first letter of each word, and treat
+						acronyms as words.</li>
+
+						<li>Do not abbreviate or add extra words
+						unnecessarily.</li>
+					</ul>
+
+					<p>The following additional rules apply to specific
+					types of names.</p>
+
+					<section>
+						<h1>Variables</h1>
+
+						<ul>
+							<li><dfn>Composite</dfn> (<code>struct</code>,
+							<code>union</code>, or <code>enum</code>): prefix
+							with <code>this</code>.</li>
+
+							<li>Function: prefix with <code>the</code>.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h1>Template Parameters</h1>
+
+						<ul>
+							<li>Composite: prefix with <code>This</code>.</li>
+
+							<li>Function: prefix with <code>The</code>.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h1>Macros</h1>
+
+						<ul>
+							<li>Macro names end in an underscore.</li>
+
+							<li>Namespace membership is faked by prefixing the
+							macro name with the namespace names (each followed
+							by an underscore).</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h1>Files</h1>
+
+					<ul>
+						<li>File names are lower case, with spaces replaced
+						with underscores.</li>
+
+						<li>Each file contains one public declaration, and the
+						file is named for that declaration.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Folders</h1>
+
+					<ul>
+						<li>Each namespace is a folder, containing everything in
+						the namespace.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Member Declaration Order</h1>
+
+					<section>
+						<h1>Primary</h1>
+
+						<ol>
+							<li>Friends</li>
+							<li>Public</li>
+							<li>Protected</li>
+							<li>Private</li>
+						</ol>
+					</section>
+
+					<section>
+						<h1>Secondary</h1>
+
+						<ol>
+							<li>Static</li>
+							<li>Non-Static</li>
+						</ol>
+					</section>
+
+					<section>
+						<h1>Tertiary</h1>
+
+						<ol>
+							<li>Types</li>
+							<li>Destructor</li>
+							<li>Constructors</li>
+							<li>Operator Overloads</li>
+							<li>Functions</li>
+							<li>Values</li>
+						</ol>
+					</section>
+
+					<section>
+						<h1>Quaternary</h1>
+
+						<ul>
+							<li>Alphanumerically sorted</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h1>Functions</h1>
+
+					<ul>
+						<li>Declare functions in the header file.</li>
+
+						<li>Define functions in the source file with
+						<code>inline</code>, and include the source file in the
+						header file.  Check if the include guard is defined to
+						determine whether the source file is being included by
+						the compiler (not defined) or the header file
+						(defined).</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Strings</h1>
+
+					<ul>
+						<li>All strings are
+						<a href="http://utf8everywhere.org">UTF-8</a> unless
+						impossible.  Exceptions must be clearly documented.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Conditional Statements</h1>
+
+					<ul>
+						<li>Always use braces, even if on a single line and/or
+						empty body.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>General</h1>
+
+					<ul>
+						<li>Use Xcode <code>MARK</code> markup.  Refer to
+						existing code to see how it is used.</li>
+
+						<li>Always mark virtual functions as virtual (for
+						<a href="http://doxygen.org">Doxygen</a>).</li>
+
+						<li>Err on the side of less code, as code size is the
+						only reliable indicator of bug frequency.</li>
+					</ul>
+				</section>
+			</section>
+		</section>
+	</body>
+</html>
