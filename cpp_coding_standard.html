@@ -208,47 +208,83 @@
 				</section>
 
 				<section>
-					<h1>Member Declaration Order</h1>
+					<h1>Declaration Order</h1>
 
 					<section>
-						<h1>Primary</h1>
+						<h1>Base Classes</h1>
+						
+						<section>
+							<h1>Primary</h1>
 
-						<ol>
-							<li>Friends</li>
-							<li>Public</li>
-							<li>Protected</li>
-							<li>Private</li>
-						</ol>
+							<ul>
+								<li>Ordered for optimal memory layout</li>
+							</ul>
+						</section>
+
+						<section>
+							<h1>Secondary</h1>
+	
+							<ol>
+								<li>Public (default for
+								<code>struct</code> and <code>union</code>)</li>
+								<li>Protected</li>
+								<li>Private</li>
+							</ol>
+						</section>
+
+						<section>
+							<h1>Tertiary</h1>
+	
+							<ul>
+								<li>Alphanumerically sorted</li>
+							</ul>
+						</section>
 					</section>
 
 					<section>
-						<h1>Secondary</h1>
+						<h1>Members</h1>
 
-						<ol>
-							<li>Static</li>
-							<li>Non-Static</li>
-						</ol>
-					</section>
-
-					<section>
-						<h1>Tertiary</h1>
-
-						<ol>
-							<li>Types</li>
-							<li>Destructor</li>
-							<li>Constructors</li>
-							<li>Operator Overloads</li>
-							<li>Functions</li>
-							<li>Values</li>
-						</ol>
-					</section>
-
-					<section>
-						<h1>Quaternary</h1>
-
-						<ul>
-							<li>Alphanumerically sorted</li>
-						</ul>
+						<section>
+							<h1>Primary</h1>
+	
+							<ol>
+								<li>Friends</li>
+								<li>Public</li>
+								<li>Protected</li>
+								<li>Private</li>
+							</ol>
+						</section>
+	
+						<section>
+							<h1>Secondary</h1>
+	
+							<ol>
+								<li>Static</li>
+								<li>Non-Static</li>
+							</ol>
+						</section>
+	
+						<section>
+							<h1>Tertiary</h1>
+	
+							<ol>
+								<li>Types</li>
+								<li>Destructor</li>
+								<li>Constructors</li>
+								<li>Operator Overloads</li>
+								<li>Functions</li>
+								<li>Values (ordered for optimal memory
+								layout)</li>
+							</ol>
+						</section>
+	
+						<section>
+							<h1>Quaternary</h1>
+	
+							<ul>
+								<li>Alphanumerically sorted</li>
+							</ul>
+						</section>
 					</section>
 				</section>
 
