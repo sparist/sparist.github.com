@@ -7,13 +7,18 @@
 		<style>
 			body {
 				font-family: "Lato", "Helvetica", serif;
-				color: #555;
+				color: #333;
+				font-size: 1.25em;
 			}
 			section {
 				margin-bottom: 1.5em;
 				margin-top: 1.5em;
 			}
 			li, p {
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+			}
+			dt {
 				margin-top: 0.5em;
 				margin-bottom: 0.5em;
 			}
@@ -110,7 +115,7 @@
 				<section>
 					<h1>Line Breaks</h1>
 
-					<p>Line breaks only occur in the following cases:</p>
+					<p>Rely on soft wrap for line wrapping.  Line breaks only occur in the following cases:</p>
 
 					<ul>
 						<li>After a delimiter symbol.</li>
@@ -328,6 +333,16 @@
 
 					<ul>
 						<li>Always use braces, even if on a single line and/or empty body.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Comments</h1>
+					
+					<ul>
+						<li>Use line-style comments for full-line comments, and block-style comments for inline comments.</li>
+	
+						<li>Use line-style Doxygen comments for commands that act on the code itself (e.g. <code>\cond</code>), and block-style Doxygen comments for documentation.</li>
 					</ul>
 				</section>
 
