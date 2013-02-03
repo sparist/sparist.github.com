@@ -1,1 +1,1 @@
-The <a href="http://sparist.github.com">GitHub User Page</a>.
+The <a href="http://sparist.github.com">Sparist page</a>.
