@@ -78,17 +78,6 @@
 						<dt>Label:</dt>
 						<dd>A <code>case</code> label, <code>goto</code> label, or access specifier.</dd>
 					</dl>
-
-				<section>
-					<h1>Keyword Subset</h1>
-
-					<p>Restrict the use of C++ keywords to the following:</p>
-
-					<ul>
-						<li>Use <code>struct</code> instead of <code>class</code>.</li>
-
-						<li>Use <code>and</code> and <code>or</code> instead of <code>&&</code> and <code>||</code>, respectively.</li>
-					</ul>
 				</section>
 
 				<section>
@@ -105,7 +94,7 @@
 					<h1>Empty Lines</h1>
 
 					<ul>
-						<li>Declarations are separated from each other by an empty line.</li>
+						<li>Declarations are surrounded by an empty line.</li>
 
 						<li>Use empty lines sparingly.  There should never be two consecutive empty lines.</li>
 					</ul>
@@ -125,8 +114,6 @@
 							<li>A single element containing a non-empty enclosure.</li>
 						</ul></li>
 
-						<li>Before and after each brace in a declaration.</li>
-
 						<li>Between the declaration and definition portions of a template definition.</li>
 
 						<li>Between the declaration and definition portions of a macro definition.</li>
@@ -136,25 +123,27 @@
 				<section>
 					<h1>Spaces</h1>
 
-					<p>There must be a space:</p>
-
 					<ul>
-						<li>Before and after an inline list.</li>
+						<li>Any extraneous white-space (e.g. more than one space consecutively, or space at the end of a line) must be removed.</li>
 
-						<li>Before and after each binary operator (excluding member and pointer operators).</li>
-
-						<li>Before and after the asterisk and ampersand in pointer and reference declarations, respectively.</li>
-
-						<li>After the <code>operator</code> keyword.</li>
+						<li>There must be a single space:<ul>
+							<li>Before and after a curly brace.</li>
+	
+							<li>Before and after an inline list.</li>
+	
+							<li>Before and after each binary operator (excluding member and pointer operators).</li>
+	
+							<li>Before and after the asterisk and ampersand in pointer and reference declarations, respectively.</li>
+	
+							<li>After the <code>operator</code> keyword.</li>
+						</ul></li>
 					</ul>
 				</section>
 
 				<section>
 					<h1>Modifiers/Qualifiers</h1>
 
-					<ul>
-						<li>Each modifier/qualifier follows whatever it modifies/qualifies.</li>
-					</ul>
+					<p>Each modifier/qualifier follows whatever it modifies/qualifies.</p>
 				</section>
 
 				<section>
@@ -220,91 +209,101 @@
 				</section>
 
 				<section>
-					<h1>Declaration Order</h1>
+					<h1>Classes</h1>
 
+					<section>					
+						<h1>Keyword</h1>
+
+						<p>Use <code>class</code> keyword for C++-style classes.  Use <code>struct</code> and <code>union</code> for C-style composites.</p>
+					</section>
+					
 					<section>
-						<h1>Base Classes</h1>
+						<h1>Access Specifiers</h1>
 						
-						<section>
-							<h1>Primary</h1>
-
-							<ul>
-								<li>Ordered for optimal memory layout</li>
-							</ul>
-						</section>
-
-						<section>
-							<h1>Secondary</h1>
-	
-							<ol>
-								<li>Public (default for <code>struct</code> and <code>union</code>)</li>
-
-								<li>Protected</li>
-
-								<li>Private</li>
-							</ol>
-						</section>
-
-						<section>
-							<h1>Tertiary</h1>
-	
-							<ul>
-								<li>Alphanumerically sorted</li>
-							</ul>
-						</section>
+						<p>Always use explicit access specifiers for base classes and members.</p>
 					</section>
 
 					<section>
-						<h1>Members</h1>
-
-						<section>
-							<h1>Primary</h1>
+						<h1>Declaration Order</h1>
 	
-							<ol>
-								<li>Friends</li>
-
-								<li>Public</li>
-
-								<li>Protected</li>
-
-								<li>Private</li>
-							</ol>
+						<section>
+							<h1>Base Classes</h1>
+							
+							<section>
+								<h1>Primary</h1>
+	
+								<p>Ordered for optimal memory layout.</p>
+							</section>
+	
+							<section>
+								<h1>Secondary</h1>
+		
+								<ol>
+									<li>Public</li>
+	
+									<li>Protected</li>
+	
+									<li>Private</li>
+								</ol>
+							</section>
+	
+							<section>
+								<h1>Tertiary</h1>
+		
+								<p>Alphanumerically sorted.</p>
+							</section>
 						</section>
 	
 						<section>
-							<h1>Secondary</h1>
+							<h1>Members</h1>
 	
-							<ol>
-								<li>Static</li>
-
-								<li>Non-Static</li>
-							</ol>
-						</section>
+							<section>
+								<h1>Primary</h1>
+		
+								<ol>
+									<li>Friends</li>
 	
-						<section>
-							<h1>Tertiary</h1>
+									<li>Public</li>
 	
-							<ol>
-								<li>Types</li>
-
-								<li>Destructor</li>
-
-								<li>Constructors</li>
-
-								<li>Operator Overloads</li>
-
-								<li>Functions</li>
-
-								<li>Values (ordered for optimal memory layout)</li>
-							</ol>
-						</section>
+									<li>Protected</li>
 	
-						<section>
-							<h1>Quaternary</h1>
+									<li>Private</li>
+								</ol>
+							</section>
+		
+							<section>
+								<h1>Secondary</h1>
+		
+								<ol>
+									<li>Static</li>
 	
-							<ul>
-								<li>Alphanumerically sorted</li>
-							</ul>
+									<li>Non-Static</li>
+								</ol>
+							</section>
+		
+							<section>
+								<h1>Tertiary</h1>
+		
+								<ol>
+									<li>Types</li>
+	
+									<li>Destructor</li>
+	
+									<li>Constructors</li>
+	
+									<li>Operator Overloads</li>
+	
+									<li>Functions</li>
+	
+									<li>Values (ordered for optimal memory layout)</li>
+								</ol>
+							</section>
+		
+							<section>
+								<h1>Quaternary</h1>
+		
+								<p>Alphanumerically sorted.</p>
+							</section>
 						</section>
 					</section>
 				</section>
@@ -328,10 +327,12 @@
 				</section>
 
 				<section>
-					<h1>Conditional Statements</h1>
+					<h1>Conditionals</h1>
 
 					<ul>
-						<li>Always use braces, even if on a single line and/or empty body.</li>
+						<li>Use <code>and</code> and <code>or</code> instead of <code>&&</code> and <code>||</code>, respectively.</li>
+
+						<li>Always enclose the conditional statement body in curly braces, even if the body is empty.</li>
 					</ul>
 				</section>
 
