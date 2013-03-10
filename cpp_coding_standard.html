@@ -93,7 +93,7 @@
 
 		<h2>Style</h2>
 
-		<p>This section attempts to codify the style used in the code.  For any case in which the rules are unclear, refer to the code.</p>
+		<p>This section attempts to codify the style used in the code. For any case in which the rules are unclear, refer to the code.</p>
 
 		<h3>Terms</h3>
 		
@@ -105,7 +105,7 @@
 				<li><code>,</code></li>
 				<li><code>;</code></li>
 				<li><code>?</code> or <code>:</code></li>
-				<li><code>and</code> or <code>or</code></li>
+				<li><code>&amp;&amp;</code> or <code>||</code></li>
 			</ul></dd>
 
 			<dt>Enclosure</dt>
@@ -143,15 +143,13 @@
 
 		<p>Declarations, in declaration scope, are surrounded by an empty line.</p>
 
-		<p>Use empty lines sparingly.  There should never be two consecutive empty lines.</p>
+		<p>Use empty lines sparingly. There should never be two consecutive empty lines.</p>
 
 		<h3>Line Breaks</h3>
 
-		<p>Rely on soft wrap for line wrapping.  Line breaks only occur in the following cases:</p>
+		<p>Rely on soft wrap for line wrapping. Line breaks only, and always, occur in the following cases:</p>
 		<ul>
-			<li>After a delimiter symbol.</li>
-
-			<li>Before and after each element of a list for any list that contains more than one element and/or an enclosure.</li>
+			<li>Before and after each element of a list that contains more than one element and/or an enclosure. Such a list must be enclosed.</li>
 
 			<li>Between the declaration and definition portions of a template definition.</li>
 
@@ -160,20 +158,20 @@
 
 		<h3>Spaces</h3>
 
-		<p>Any extraneous white-space (more than one space consecutively, or space at the end of a line) must be removed.</p>
-
 		<p>There must be a single space:</p>
 		<ul>
-			<li>Before and after a curly brace.</li>
+			<li>Before and after each binary and ternary operator (excluding member and pointer operators).</li>
 
-			<li>Before and after an inline list.</li>
+			<li>Before and after the <code>*</code> and <code>&amp;</code> in pointer and reference declarations, respectively.</li>
 
-			<li>Before and after each binary operator (excluding member and pointer operators).</li>
-
-			<li>Before and after the asterisk and ampersand in pointer and reference declarations, respectively.</li>
-
-			<li>After the <code>operator</code> keyword.</li>
+			<li>Before and after each reserved word (and each "argument" thereof) that doesn't act like a value (i.e. <code>this</code>, <code>nullptr</code>) or function (i.e. <code>sizeof</code>, <code>typeid</code>, *<code>_cast</code>, <code>static_assert</code>).</li>
 		</ul>
+
+		<p>Any extraneous white-space (more than one space consecutively, or space at the end of a line) must be removed.</p>
+
+		<h3>Parentheses</h3>
+		
+		<p>Whenever precedence is not clearly reflected by spacing, use parentheses to indicate precedence explicitly.</p>
 
 		<h3>Modifiers/Qualifiers</h3>
 
@@ -230,7 +228,7 @@
 
 		<h4>Keyword</h4>
 
-		<p>Use <code>class</code> keyword for C++-style classes.  Use <code>struct</code> and <code>union</code> for C-style composites.</p>
+		<p>Use <code>class</code> keyword for C++-style classes. Use <code>struct</code> and <code>union</code> for C-style composites.</p>
 		
 		<h4>Access Specifiers</h4>
 		
@@ -308,13 +306,13 @@
 
 		<p>Declare functions in the header file.</p>
 
-		<p>Define functions in the source file with <code>inline</code>, and include the source file in the header file.  Check if the include guard is defined to determine whether the source file is being included by the compiler (not defined) or the header file (defined).</p>
+		<p>Define functions in the source file with <code>inline</code>, and include the source file in the header file. Check if the include guard is defined to determine whether the source file is being included by the compiler (not defined) or the header file (defined).</p>
 
 		<p>Always mark virtual functions as <code>virtual</code> (for <a href="http://doxygen.org">Doxygen</a>).</p>
 
 		<h3>Strings</h3>
 
-		<p>All strings are <a href="http://utf8everywhere.org">UTF-8</a> unless impossible.  Exceptions must be clearly documented.</p>
+		<p>All strings are <a href="http://utf8everywhere.org">UTF-8</a> unless impossible. Exceptions must be clearly documented.</p>
 
 		<h3>Conditionals</h3>
 
@@ -328,6 +326,6 @@
 
 		<h3>IDE Markup</h3>
 
-		<p>Use Xcode <code>MARK</code> markup.  Refer to existing code to see how it is used.</p>
+		<p>Use Xcode <code>MARK</code> markup. Refer to existing code to see how it is used.</p>
 	</body>
 </html>
