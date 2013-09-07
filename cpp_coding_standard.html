@@ -27,7 +27,7 @@
 				font-weight: bold;
 			}
 			dt:after {
-				content: ":";	
+				content: ":";
 			}
 
 			h1 {
@@ -52,7 +52,7 @@
 			h2 {
 				counter-increment: h2;
 				counter-reset: h3;
-			} 
+			}
 			h3 {
 				counter-increment: h3;
 				counter-reset: h4;
@@ -87,7 +87,7 @@
 	<body>
 
 		<h1>Sparist C++ Coding Standard</h1>
-		
+
 		<p>This document defines the coding standard for all <a href="http://sparist.com">Sparist</a> C++ projects.</p>
 
 		<h2>Rules and Recommendations</h2>
@@ -140,9 +140,9 @@
 
 		<h3>Line Indentation</h3>
 
-		<p>Indent by one tab character for each list that the line is nested within.</p>
-		
-		<p>Each label is considered part of a list, not inside it, and is indented accordingly.</p>
+		<p>Indent by one tab character for each enclosure that the line is nested within.</p>
+
+		<p>Each label is considered part of an enclosure, not inside it, and has the same indentation as the enclosure symbols.</p>
 
 		<h3>Empty Lines</h3>
 
@@ -156,7 +156,7 @@
 
 		<ul>
 
-			<li>Before and after each element of a list that contains more than one element and/or an enclosure. Such a list must be enclosed.</li>
+			<li>Before and after each element of a list that contains more than one element.</li>
 
 			<li>Between the declaration and definition portions of a template definition.</li>
 
@@ -166,23 +166,47 @@
 
 		<h3>Spaces</h3>
 
-		<p>There must be a single space:</p>
+		<p>Spaces occur before and after the following expression elements:</p>
 
 		<ul>
 
-			<li>Before and after each binary and ternary operator (excluding member and pointer operators).</li>
+			<li>Binary and ternary operators, excluding the following:<ul>
 
-			<li>Before and after the <code>*</code> and <code>&amp;</code> in pointer and reference declarations, respectively.</li>
+				<li>Member (<code>.</code>) and pointer member (<code>-&gt;</code>) operators.</li>
 
-			<li>Before and after each reserved word (and each "argument" thereof) that doesn't act like a value (i.e. <code>this</code>, <code>nullptr</code>) or function (i.e. <code>sizeof</code>, <code>typeid</code>, *<code>_cast</code>, <code>static_assert</code>).</li>
+				<li>Comma (<code>,</code>) operators, which have a space after and not before.</li>
+
+			</ul></li>
+
+		</ul>
+
+		<p>Spaces occur before and after the following non-expression elements:</p>
+
+		<ul>
+
+			<li>Reserved words that do not act like a value (i.e. <code>this</code>, <code>nullptr</code>) or function (i.e. <code>sizeof</code>, <code>typeid</code>, *<code>_cast</code>, <code>static_assert</code>).</li>
+
+			<li><code>*</code> and <code>&amp;</code>.</li>
+
+			<li>Enclosures, excluding function parameter lists, macro parameter lists, and template argument lists.</li>
+
+			<li>A colon that precedes an initializer or base class list.</li>
 
 		</ul>
 
 		<p>Any extraneous white-space (more than one space consecutively, or space at the end of a line) must be removed.</p>
 
 		<h3>Parentheses</h3>
-		
-		<p>Whenever precedence is not clearly reflected by spacing, use parentheses to indicate precedence explicitly.</p>
+
+		<p>Use parentheses:</p>
+
+		<ul>
+
+			<li>To enclose a list (if possible), thereby allowing indentation for clarity.</li>
+
+			<li>To explicitly indicate precedence when not clearly reflected by spacing.</li>
+
+		</ul>
 
 		<h3>Modifiers/Qualifiers</h3>
 
@@ -205,7 +229,7 @@
 		<h4>Variables</h4>
 
 		<h5>Composite</h5>
-		
+
 		<p>Prefix with <code>this</code>.</p>
 
 		<h5>Function</h5>
@@ -243,9 +267,9 @@
 		<h4>Keyword</h4>
 
 		<p>Use <code>class</code> keyword for C++-style classes. Use <code>struct</code> and <code>union</code> for C-style composites.</p>
-		
+
 		<h4>Access Specifiers</h4>
-		
+
 		<p>Always use explicit access specifiers for base classes and members.</p>
 
 		<h4>Declaration Order</h4>
@@ -269,7 +293,7 @@
 			<li>Private</li>
 
 		</ol>
-		
+
 		<h6>Tertiary</h6>
 
 		<p>Ordered alphanumerically.</p>
@@ -291,7 +315,7 @@
 			<li>Private</li>
 
 		</ol>
-			
+
 		<h6>Secondary</h6>
 
 		<p>Ordered by:</p>
@@ -303,7 +327,7 @@
 			<li>Non-Static</li>
 
 		</ol>
-			
+
 		<h6>Tertiary</h6>
 
 		<p>Ordered by:</p>
@@ -323,7 +347,7 @@
 			<li>Values (ordered for optimal memory layout)</li>
 
 		</ol>
-		
+
 		<h6>Quaternary</h6>
 
 		<p>Ordered alphanumerically.</p>
@@ -345,7 +369,7 @@
 		<p>Always enclose the conditional statement body in curly braces, even if the body is empty.</p>
 
 		<h3>Comments</h3>
-		
+
 		<p>Use line-style comments for full-line comments, and block-style comments for inline comments.</p>
 
 		<p>Use line-style Doxygen comments for commands that act on the code itself (e.g. <code>\cond</code>), and block-style Doxygen comments for documentation.</p>
