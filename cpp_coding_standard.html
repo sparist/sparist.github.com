@@ -94,11 +94,7 @@
 
 		<p>All rules and recommendations defined by the <a href="https://www.securecoding.cert.org/confluence/display/cplusplus">CERT C++ Secure Coding Standard</a> must be followed.
 
-		<h2>Style</h2>
-
-		<p>This section attempts to codify the style used in the code. For any case in which the rules are unclear, refer to the code.</p>
-
-		<h3>Terms</h3>
+		<h2>Terms</h2>
 
 		<p>The following terms are used to represent syntactic concepts in C++ for the purposes of this document.</p>
 
@@ -132,11 +128,9 @@
 
 		</dl>
 
-		<h3>General</h3>
+		<h2>Style</h2>
 
-		<p>All code must be stylistically consistent.</p>
-
-		<p>Err on the side of less code, as code size is the only reliable indicator of bug frequency.</p>
+		<p>This section attempts to codify the style used in the code. For any case in which the rules are unclear, refer to the code.</p>
 
 		<h3>Line Indentation</h3>
 
@@ -186,11 +180,11 @@
 
 			<li>Reserved words that do not act like a value (i.e. <code>this</code>, <code>nullptr</code>) or function (i.e. <code>sizeof</code>, <code>typeid</code>, *<code>_cast</code>, <code>static_assert</code>).</li>
 
-			<li><code>*</code> and <code>&amp;</code>.</li>
+			<li>Asterisks (<code>*</code>) in pointer declarations.</li>
+
+			<li>Ampersands (<code>&amp;</code>) in reference declarations.</li>
 
 			<li>Enclosures, excluding function parameter lists, macro parameter lists, and template argument lists.</li>
-
-			<li>A colon that precedes an initializer or base class list.</li>
 
 		</ul>
 
